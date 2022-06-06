@@ -18,20 +18,10 @@ public class DeleteElementInArray {
                 i--;
             }
         }
-
-
-        //việt anh
-//        for (int i = 0; i < ints.length; i++) {
-//            if (ints[i] == value) {
-//                continue;
-//            }
-//            System.out.print(ints[i] + ";");
-//        }
-//        System.out.println();
-
         display(ints);
     }
 
+    //tạo phương thức hiển thị
     public static void display(int[] array) {
         for (int e : array) {
             System.out.print(e + ";");

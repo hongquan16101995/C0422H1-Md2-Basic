@@ -1,9 +1,6 @@
 package common;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-
-public class Test {
+public class TestToolArray {
     public static void main(String[] args) {
         int[] arr = {1,5,8,3,2,7,9,4,5,10};
         int[] arr1 = {2,7,9,4};

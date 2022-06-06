@@ -9,7 +9,7 @@ package oop.Inheritance;
 // Java chỉ chấp nhận đơn kế thừa; tránh trạng thái kim cương
 // Không thể kế thừa constructor
 
-public class Student extends Human{
+public class Student extends Human {
     public double averagePoint;
 
     public Student() {

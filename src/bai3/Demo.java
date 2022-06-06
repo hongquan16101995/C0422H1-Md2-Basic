@@ -4,13 +4,10 @@ public class Demo {
     public static void main(String[] args) {
         String a = "abc";
         char a1 = 'a';
+        //trả về giá trị kiểu dữ liệu ký tự ở vị trí tương ứng trong chuỗi
+        System.out.println(a.charAt(2));
 
-
-        for (int i = 0; i < a.length(); i++) {
-            if (a.charAt(i) == a1) {
-
-            }
-        }
+//        //kiểm tra chuỗi có tồn tại hay không?
 //        String[] arr = a.split("");
 //        boolean check = false;
 //        for (String element : arr) {
