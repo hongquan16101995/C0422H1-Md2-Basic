@@ -12,9 +12,9 @@ public class Test {
 //        int[] newArr = ToolArray.shift(arr);
 //        int[] newArr = ToolArray.unshift(arr, 100);
 //        int[] newArr = ToolArray.concat(arr, arr1);
-        String value = ToolArray.join(arr, "--");
+//        String value = ToolArray.join(arr, "--");
 //        String value = ToolArray.toString(arr);
-        System.out.println(value);
+//        System.out.println(value);
 //        ToolArray.reverse(arr);
 //        ToolArray.sortUp(arr);
 //        ToolArray.sortDown(arr);
