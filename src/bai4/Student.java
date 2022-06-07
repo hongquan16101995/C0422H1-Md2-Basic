@@ -1,6 +1,9 @@
 package bai4;
 
 public class Student {
+    //biến để gán id tự tăng
+    private static int index = 0;
+    private int id;
     private String name;
     private int age;
     private String gender;
@@ -9,11 +12,28 @@ public class Student {
     public Student() {
     }
 
-    public Student(String name, int age, String gender, double averagePoint) {
+    public Student(int id, String name, int age, String gender, double averagePoint) {
+        this.id = id;
         this.name = name;
         this.age = age;
         this.gender = gender;
         this.averagePoint = averagePoint;
+    }
+
+    public Student(String name, int age, String gender, double averagePoint) {
+        this.id = ++index;
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.averagePoint = averagePoint;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -51,7 +71,8 @@ public class Student {
     @Override
     public String toString() {
         return "Student{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", age=" + age +
                 ", gender='" + gender + '\'' +
                 ", averagePoint=" + averagePoint +
