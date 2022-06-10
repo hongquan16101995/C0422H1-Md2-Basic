@@ -1,4 +1,4 @@
-package bai4;
+package bai4.student;
 
 import java.util.Scanner;
 
@@ -34,13 +34,19 @@ public class DeclareMenu {
                     studentManager.display();
                     break;
                 case 5:
-                    System.out.println("Enter id of Student you want to display: ");
-                    int displayID = scanner.nextInt();
-                    studentManager.displayOne(displayID);
+                    displayOneStudent(studentManager, scanner);
                     break;
             }
             System.out.println("-------------------------");
         } while (choice != 0);
+    }
+
+    private static void displayOneStudent(StudentManager studentManager, Scanner scanner) {
+        System.out.println("Enter id of Student you want to display: ");
+        int displayID = scanner.nextInt();
+        if (!studentManager.displayOne(displayID)) {
+            System.out.println("Dose not exist Student have id: " + displayID);
+        }
     }
 
     private static void displayEdit(StudentManager studentManager, Scanner scanner) {

@@ -12,5 +12,5 @@ public interface Language {
     int sumNumber(int num1, int num2);
 
     //không chứa các phương thức non-abstract
-    //public void run(){};
+//    public void run(){};
 }

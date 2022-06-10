@@ -1,8 +1,11 @@
 package oop.Abstraction;
 
 import oop.Abstraction.Abstract.People;
+import oop.Abstraction.Interface.Animal;
 import oop.Abstraction.Interface.Language;
 import oop.Abstraction.Interface.Television;
+
+import java.util.Scanner;
 
 public class DemoAbstraction {
     public static void main(String[] args) {

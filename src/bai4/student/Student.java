@@ -1,4 +1,4 @@
-package bai4;
+package bai4.student;
 
 public class Student {
     //biến để gán id tự tăng

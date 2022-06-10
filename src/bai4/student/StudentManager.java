@@ -1,4 +1,4 @@
-package bai4;
+package bai4.student;
 
 import java.util.Scanner;
 
@@ -37,7 +37,7 @@ public class StudentManager {
     //nếu không có thì trả về -1
     public int checkId(int id) {
         for (int i = 0; i < this.students.length; i++) {
-            if (this.students[i].getId() == id){
+            if (this.students[i].getId() == id) {
                 return i;
             }
         }
@@ -48,8 +48,12 @@ public class StudentManager {
     public boolean deleteStudent(int id) {
         if (this.checkId(id) != -1) {
             Student[] studentArray = new Student[this.students.length - 1];
-            for (int i = this.checkId(id) + 1; i < this.students.length; i++) {
-                studentArray[i - 1] = this.students[i];
+            for (int i = 0; i < this.students.length; i++) {
+                if (i < this.checkId(id)) {
+                    studentArray[i] = students[i];
+                } else if (i > this.checkId(id)) {
+                    studentArray[i - 1] = students[i];
+                }
             }
             students = studentArray;
             return true;
@@ -101,18 +105,20 @@ public class StudentManager {
 
     //phương thức hiển thị tất cả Student hiện có
     public void display() {
+        if (students.length == 0) {
+            System.out.println("There is no Student in the array");
+        }
         for (Student student : students) {
             System.out.println(student);
         }
     }
 
     //phương thức hiển thị Student theo id
-    public void displayOne(int id) {
-        for (Student student : students) {
-            if (student.getId() == id) {
-                System.out.println(student);
-                break;
-            }
+    public boolean displayOne(int id) {
+        if (this.checkId(id) != -1) {
+            System.out.println(students[this.checkId(id)]);
+            return true;
         }
+        return false;
     }
 }
